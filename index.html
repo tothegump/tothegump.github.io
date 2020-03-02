@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>文章 | Stupid is as stupid does</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.3.0">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.47c10540.css" as="style"><link rel="preload" href="/assets/js/app.8713b285.js" as="script"><link rel="preload" href="/assets/js/29.8b77c28a.js" as="script"><link rel="preload" href="/assets/js/4.9410402b.js" as="script"><link rel="preload" href="/assets/js/26.8b0c9afd.js" as="script"><link rel="prefetch" href="/assets/js/13.f0b04c5b.js"><link rel="prefetch" href="/assets/js/1.b23a47f1.js"><link rel="prefetch" href="/assets/js/3.119ccb4a.js"><link rel="prefetch" href="/assets/js/5.a890f757.js"><link rel="prefetch" href="/assets/js/6.53327dae.js"><link rel="prefetch" href="/assets/js/7.4896b72f.js"><link rel="prefetch" href="/assets/js/8.a1a2dde7.js"><link rel="prefetch" href="/assets/js/9.221d2e76.js"><link rel="prefetch" href="/assets/js/10.0a051333.js"><link rel="prefetch" href="/assets/js/11.eef099e2.js"><link rel="prefetch" href="/assets/js/12.a89cf265.js"><link rel="prefetch" href="/assets/js/14.5b6ce92e.js"><link rel="prefetch" href="/assets/js/15.dc6f38fd.js"><link rel="prefetch" href="/assets/js/16.f56f9898.js"><link rel="prefetch" href="/assets/js/17.d3476957.js"><link rel="prefetch" href="/assets/js/18.4e38416b.js"><link rel="prefetch" href="/assets/js/19.75106691.js"><link rel="prefetch" href="/assets/js/20.b7e49cb9.js"><link rel="prefetch" href="/assets/js/21.18084f5d.js"><link rel="prefetch" href="/assets/js/22.01eeebe5.js"><link rel="prefetch" href="/assets/js/23.ef208987.js"><link rel="prefetch" href="/assets/js/24.41c931dd.js"><link rel="prefetch" href="/assets/js/25.127bdf1e.js"><link rel="prefetch" href="/assets/js/27.a524ea30.js"><link rel="prefetch" href="/assets/js/28.d27e5638.js"><link rel="prefetch" href="/assets/js/30.88c816c6.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.5397a2a3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.47c10540.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/" class="nav-link home-link router-link-exact-active router-link-active">Stupid is as stupid does </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/" class="nav-link router-link-exact-active router-link-active">文章</a></li><li class="nav-item"><a href="/arts/" class="nav-link">ARTS</a></li><li class="nav-item"><a href="/tag/" class="nav-link">Tags</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/" class="nav-link mobile-home-link router-link-exact-active router-link-active">Stupid is as stupid does </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/" class="nav-link router-link-exact-active router-link-active">文章</a></li><li class="mobile-nav-item"><a href="/arts/" class="nav-link">ARTS</a></li><li class="mobile-nav-item"><a href="/tag/" class="nav-link">Tags</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div><div id="base-list-layout"><div itemscope="itemscope" itemtype="http://schema.org/Blog" class="ui-posts"><article itemprop="blogPost" itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="ui-post"><meta itemprop="mainEntityOfPage" content="/2020/03/02/_02-pipelines-and-cancellation/"> <header itemprop="name headline" class="ui-post-title"><a href="/2020/03/02/_02-pipelines-and-cancellation/" class="nav-link">【翻译】Go 并发模式：  Pipelines and cancellation</a></header> <p itemprop="description" class="ui-post-summary">
+        
+Introduction
+Go’s concurrency primitives 使得构建数据流管道来充分利用 I/O 和多核 CPU 非常容易。这篇文章展现了几个例子，跟管道，尤其是操作失败的细节，介绍了干净处理失败的技术。
+What is a pipeline
+在 Go 中没有正式的关于管道（pipeline）的定义，只是很多种并发编程的一种。非正式的定义，是一系列由 chann ...
+        </p> <footer><!----> <div class="ui-post-meta ui-post-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2020-03-02T00:00:00.000Z">
+            2020-03-02
+          </time></div> <div itemprop="keywords" class="ui-post-meta ui-post-tag"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg> <a href="/tag/golang">
+            golang
+          </a><a href="/tag/translate">
+            translate
+          </a><a href="/tag/go-blog">
+            go-blog
+          </a></div></footer></article><article itemprop="blogPost" itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="ui-post"><meta itemprop="mainEntityOfPage" content="/2019/03/17/java-learning/"> <header itemprop="name headline" class="ui-post-title"><a href="/2019/03/17/java-learning/" class="nav-link">Java 学习感受</a></header> <p itemprop="description" class="ui-post-summary">
+        
+最近在了解 Java 技术栈，抛开众所周知的繁琐不谈，其实收获和感受还是相当多的。以我粗浅的了解，分了这几个部分：虚拟机，Java 语言本身，Web 生态，其他（就是我不知道）。
+学习 JVM 时的感受
+了解 Java 技术栈的过程，对我而言，是一个比较全面复习计算机相关领域知识的过程，这里面涉及到了很多需要关注的点，我发现，之前在接触其他语言的过程中，有很多店应该关注而没有关注过，丧失了 ...
+        </p> <footer><!----> <div class="ui-post-meta ui-post-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2019-03-17T00:00:00.000Z">
+            2019-03-17
+          </time></div> <div itemprop="keywords" class="ui-post-meta ui-post-tag"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg> <a href="/tag/chinwag">
+            chinwag
+          </a></div></footer></article><article itemprop="blogPost" itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="ui-post"><meta itemprop="mainEntityOfPage" content="/2019/03/17/java-class-loader-1/"> <header itemprop="name headline" class="ui-post-title"><a href="/2019/03/17/java-class-loader-1/" class="nav-link">Java Class Loader 1</a></header> <p itemprop="description" class="ui-post-summary">
+        
+不知道为什么，刚开始学习 Java, 就跟一个叫做“类加载器”的概念杠上了（尴尬）。查了一些资料，总体感觉是，关于这个概念讲起来是比较简单，而且这些资料基本上都在周志明那本书的范围内。看起来很简单，看起来很容易掌握，然鹅，了解了这些概念之后，我却更加迷茫了，感觉自己都明白了，又感觉自己什么都不懂。“听过很多道理，依然过不好这一生”的感觉。
+
+乱翻了一些资料
+浏览了很多资料，感觉都是泛泛而谈 ...
+        </p> <footer><!----> <div class="ui-post-meta ui-post-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2019-03-17T00:00:00.000Z">
+            2019-03-17
+          </time></div> <div itemprop="keywords" class="ui-post-meta ui-post-tag"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg> <a href="/tag/Java">
+            Java
+          </a></div></footer></article><article itemprop="blogPost" itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="ui-post"><meta itemprop="mainEntityOfPage" content="/2018/09/25/intro-failure-semantics/"> <header itemprop="name headline" class="ui-post-title"><a href="/2018/09/25/intro-failure-semantics/" class="nav-link">一篇关于 Failure 的文章</a></header> <p itemprop="description" class="ui-post-summary">
+        
+背景
+Wikipedia 真是一个精彩的世界，在看关于 Byzantine fault tolerance 的解释，其中提到了
+&gt; Byzantine failures are considered the most general and most difficult class of failures among the  [failure modes](https://en.m.wi ...
+        </p> <footer><!----> <div class="ui-post-meta ui-post-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2018-09-25T00:00:00.000Z">
+            2018-09-25
+          </time></div> <div itemprop="keywords" class="ui-post-meta ui-post-tag"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg> <a href="/tag/distributed system">
+            distributed system
+          </a></div></footer></article><article itemprop="blogPost" itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="ui-post"><meta itemprop="mainEntityOfPage" content="/2018/08/06/intro-wsgi/"> <header itemprop="name headline" class="ui-post-title"><a href="/2018/08/06/intro-wsgi/" class="nav-link">简单聊下 WSGI</a></header> <p itemprop="description" class="ui-post-summary">
+        
+是pep 3333中定义的一个规范。其实是希望把底层网络处理跟应用分开，这也是因为这 Java 中有 servlet 的成功案例，可以看到这样分一层的巨大好处。有了 wsgi 之后，Python 语言的 Web 框架变得炒鸡多，随便就可以说上来很多：Django, Flask, web.py(sign), web2py, bottle, pylons, humph (偷偷摸摸放进来，话说这个好久 ...
+        </p> <footer><!----> <div class="ui-post-meta ui-post-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2018-08-06T09:41:19.000Z">
+            2018-08-06
+          </time></div> <div itemprop="keywords" class="ui-post-meta ui-post-tag"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg> <a href="/tag/wsgi">
+            wsgi
+          </a><a href="/tag/python">
+            python
+          </a><a href="/tag/web-server">
+            web-server
+          </a></div></footer></article></div> <!----></div></div></div> <footer class="footer" data-v-582f9766><div class="footer-left-wrap" data-v-582f9766><ul class="contact" data-v-582f9766><li class="contact-item" data-v-582f9766><a href="https://github.com/tothegump" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-582f9766><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-582f9766><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-582f9766></path></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-582f9766><ul class="copyright" data-v-582f9766></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8713b285.js" defer></script><script src="/assets/js/29.8b77c28a.js" defer></script><script src="/assets/js/4.9410402b.js" defer></script><script src="/assets/js/26.8b0c9afd.js" defer></script>
+  </body>
+</html>

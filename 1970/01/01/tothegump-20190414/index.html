@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2019-04-14 | Stupid is as stupid does</title>
+    <meta name="description" content="
+# 1.Algorithm
+&gt; 每周至少做一个 leetcode 的算法题
+
+https://leetcode.com/problems/search-a-2d-matrix-ii/
+Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the follow ...">
+    <meta name="generator" content="VuePress 1.3.0">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.47c10540.css" as="style"><link rel="preload" href="/assets/js/app.8713b285.js" as="script"><link rel="preload" href="/assets/js/29.8b77c28a.js" as="script"><link rel="preload" href="/assets/js/5.a890f757.js" as="script"><link rel="preload" href="/assets/js/11.eef099e2.js" as="script"><link rel="prefetch" href="/assets/js/13.f0b04c5b.js"><link rel="prefetch" href="/assets/js/1.b23a47f1.js"><link rel="prefetch" href="/assets/js/3.119ccb4a.js"><link rel="prefetch" href="/assets/js/4.9410402b.js"><link rel="prefetch" href="/assets/js/6.53327dae.js"><link rel="prefetch" href="/assets/js/7.4896b72f.js"><link rel="prefetch" href="/assets/js/8.a1a2dde7.js"><link rel="prefetch" href="/assets/js/9.221d2e76.js"><link rel="prefetch" href="/assets/js/10.0a051333.js"><link rel="prefetch" href="/assets/js/12.a89cf265.js"><link rel="prefetch" href="/assets/js/14.5b6ce92e.js"><link rel="prefetch" href="/assets/js/15.dc6f38fd.js"><link rel="prefetch" href="/assets/js/16.f56f9898.js"><link rel="prefetch" href="/assets/js/17.d3476957.js"><link rel="prefetch" href="/assets/js/18.4e38416b.js"><link rel="prefetch" href="/assets/js/19.75106691.js"><link rel="prefetch" href="/assets/js/20.b7e49cb9.js"><link rel="prefetch" href="/assets/js/21.18084f5d.js"><link rel="prefetch" href="/assets/js/22.01eeebe5.js"><link rel="prefetch" href="/assets/js/23.ef208987.js"><link rel="prefetch" href="/assets/js/24.41c931dd.js"><link rel="prefetch" href="/assets/js/25.127bdf1e.js"><link rel="prefetch" href="/assets/js/26.8b0c9afd.js"><link rel="prefetch" href="/assets/js/27.a524ea30.js"><link rel="prefetch" href="/assets/js/28.d27e5638.js"><link rel="prefetch" href="/assets/js/30.88c816c6.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.5397a2a3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.47c10540.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/" class="nav-link home-link">Stupid is as stupid does </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/" class="nav-link">文章</a></li><li class="nav-item"><a href="/arts/" class="nav-link">ARTS</a></li><li class="nav-item"><a href="/tag/" class="nav-link">Tags</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/" class="nav-link mobile-home-link">Stupid is as stupid does </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/" class="nav-link">文章</a></li><li class="mobile-nav-item"><a href="/arts/" class="nav-link">ARTS</a></li><li class="mobile-nav-item"><a href="/tag/" class="nav-link">Tags</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        
+      </h1> <div class="post-meta"><!----> <!----> <!----></div></header> <div itemprop="articleBody" class="content__default"><h1 id="_2019-04-14"><a href="#_2019-04-14" aria-hidden="true" class="header-anchor">#</a> 2019-04-14</h1> <p><strong># 1.Algorithm</strong></p> <blockquote><p>每周至少做一个 leetcode 的算法题</p></blockquote> <p>https://leetcode.com/problems/search-a-2d-matrix-ii/
+Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+Integers in each row are sorted in ascending from left to right.
+Integers in each column are sorted in ascending from top to bottom.
+两种解题思路：</p> <ol><li>O(mlogN) 二分</li> <li>O(m+n) 从右上角开始找，如果大于 x 就向左走，如果小于 x 就向下走</li></ol> <div class="language- extra-class"><pre class="language-text"><code>class Solution:
+    def searchMatrix1(self, matrix, target):
+        &quot;&quot;&quot;
+        :type matrix: List[List[int]]
+        :type target: int
+        :rtype: bool
+        &quot;&quot;&quot;
+        row_count = len(matrix)
+        if row_count &lt;= 0:
+            return False
+        col_count = len(matrix[0])
+        if col_count &lt;= 0:
+            return False
+        for r in range(row_count):
+            if self.binary_search(matrix[r], target):
+                return True
+        return False
+
+    def binary_search(self, l, x):
+        start = 0
+        end = len(l) - 1
+        while start &lt;= end:
+            mid = (start + end) // 2
+            if l[mid] == x:
+                return True
+            elif l[mid] &gt; x:
+                end = mid - 1
+            elif l[mid] &lt; x:
+                start = mid + 1
+        return False
+
+    def searchMatrix(self, matrix, target):
+        &quot;&quot;&quot;
+        :type matrix: List[List[int]]
+        :type target: int
+        :rtype: bool
+        &quot;&quot;&quot;
+        row_count = len(matrix)
+        if row_count &lt;= 0:
+            return False
+        col_count = len(matrix[0])
+        if col_count &lt;= 0:
+            return False
+        r, c = 0, col_count - 1
+        while r &lt; row_count and c &gt;= 0:
+            if matrix[r][c] == target:
+                return True
+            elif matrix[r][c] &gt; target:
+                c -= 1
+            elif matrix[r][c] &lt; target:
+                r += 1
+        return False
+
+</code></pre></div><p><strong># 2.Review</strong></p> <blockquote><p>阅读并点评至少一篇英文技术文章
+同时读了好几篇，主要是 PEP-205
+关于 Python 的 weakref</p></blockquote> <p><strong># 3.Tip</strong></p> <blockquote><p>学习至少一个技术技巧</p></blockquote> <ul><li>熟悉了 Celery 的启动过程</li></ul> <p><strong># 4.Share</strong></p> <blockquote><p>分享一篇有观点和思考的技术文章<br>
+本周输出 （本周没有输出，贴一个以前的输出吧）</p></blockquote> <h1 id="go-的测试"><a href="#go-的测试" aria-hidden="true" class="header-anchor">#</a> Go 的测试</h1> <p>我自己在接触一门新语言的时候，总是尽早的去了解这门语言的 UnitTest 相关信息，这样可以写一个函数，就能很方便的跑起来看看效果了，非常爽，非常省时间、精力。</p> <p>Go 的测试简直太方便了，而且测试在 Go 的设计中也是处于一个比较重要的地位。</p> <h2 id="背景"><a href="#背景" aria-hidden="true" class="header-anchor">#</a> 背景</h2> <p>我写了一段小函数</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span> <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> a <span class="token operator">-</span> b
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">sub</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span> <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> a <span class="token operator">-</span> b
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>flag: 这么简单的功能，一定不会出错吧。
+那就跑一下吧，很多人的做法是，写个 main 函数，跑一下：</p></blockquote> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">sub</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>跑完后看输出的结果。
+然后跑完上面的 main 函数就会发现， flag 生效了，add 这个函数有点不对。
+赶紧改一下，然后再跑完整的命令。
+显然，平时不会有这么小的代码，复现一个问题耗时很久。</p> <h2 id="快速开始"><a href="#快速开始" aria-hidden="true" class="header-anchor">#</a> 快速开始</h2> <p>go 的测试，非常简单：</p> <ul><li>测试和源码文件在一个包中</li> <li>测试文件的名字是代码文件名 + &quot;_test.go”</li> <li>测试函数的名字是 “Test” + 函数名，并接受一个 *testing.T 的参数</li> <li>命令行 <code>go test</code></li></ul> <p>知道上面的就已经可以开始了。</p> <h2 id="多了解一点"><a href="#多了解一点" aria-hidden="true" class="header-anchor">#</a> 多了解一点</h2> <p>go 的测试可以分为：</p> <ul><li>Test
+<ul><li>接收一个参数 *testing.T</li> <li>并行测试</li></ul></li> <li>Benchmarks
+<ul><li>接收一个参数 *testing.B</li> <li>串行测试</li></ul></li> <li>Examples
+<ul><li>可以在注释中搞点事
+<ul><li>以 “Output” 开头，然后跟输出比对</li> <li>以 “Unordered” 开头，就是忽略输出顺序</li> <li>没有在注释中搞事，只编译不跑</li></ul></li> <li>命名有规范，针对：类型 T ，函数 F ，类型 T 的方法 M ，有</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>func Example() { ... }
+func ExampleF() { ... }
+func ExampleT() { ... }
+func ExampleT_M() { ... }
+
+func Example_suffix() { ... }
+func ExampleF_suffix() { ... }
+func ExampleT_suffix() { ... }
+func ExampleT_M_suffix() { ... }
+</code></pre></div><h2 id="关于-examples"><a href="#关于-examples" aria-hidden="true" class="header-anchor">#</a> 关于 Examples</h2> <p>在看 Go 的文档 <a href="https://golang.org/doc/effective_go.html" target="_blank" rel="noopener noreferrer">effective go<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 时，有这么一段：</p> <div class="language- extra-class"><pre class="language-text"><code>The  [Go package sources](https://golang.org/src/)  are intended to serve not only as the core library but also as examples of how to use the language. Moreover, many of the packages contain working, self-contained executable examples you can run directly from the  [golang.org](https://golang.org/)  web site, such as  [this one](https://golang.org/pkg/strings/#example_Map)  (if necessary, click on the word &quot;Example&quot; to open it up). If you have a question about how to approach a problem or how something might be implemented, the documentation, code and examples in the library can provide answers, ideas and background.
+
+</code></pre></div></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#背景" title="背景">背景</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#快速开始" title="快速开始">快速开始</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#多了解一点" title="多了解一点">多了解一点</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#关于-examples" title="关于 Examples">关于 Examples</a></div></div></div></div> <footer class="footer" data-v-582f9766><div class="footer-left-wrap" data-v-582f9766><ul class="contact" data-v-582f9766><li class="contact-item" data-v-582f9766><a href="https://github.com/tothegump" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-582f9766><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-582f9766><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-582f9766></path></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-582f9766><ul class="copyright" data-v-582f9766></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8713b285.js" defer></script><script src="/assets/js/29.8b77c28a.js" defer></script><script src="/assets/js/5.a890f757.js" defer></script><script src="/assets/js/11.eef099e2.js" defer></script>
+  </body>
+</html>
