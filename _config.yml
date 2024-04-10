@@ -1,11 +1,3 @@
 theme: jekyll-theme-minimal
 description: Bookmark this to keep an eye on my project updates!
 
-# Site settings
-title: Tothegump's homepage
-SEOTitle: Tothegump's homepage | You Blog    	 #显示在浏览器上搜索的时候显示的标题
-header-img: img/ai-master.png  	#显示在首页的背景图片
-description: "tothegump's homepage, including ai, Python, thinking, and playing"
-keyword: "BY, BY Blog, ai, python, technology"
-url: "https://tothegump.github.io"          # 这个就是填写你的博客地址
-baseurl: ""      # 这个我们不用填写
